@@ -1,4 +1,4 @@
-from utils.test_configparser import getGmailUrl
+from utils.newconfigparser import getGmailUrl
 
 def test_chechgetGmailUrl():
     print(getGmailUrl())
