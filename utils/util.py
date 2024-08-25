@@ -17,4 +17,3 @@ def get_data():
 		data = [tuple(row)for row in reader]
 	return data
 
-print(get_data())
