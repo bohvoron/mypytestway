@@ -24,7 +24,7 @@ class ConfigFileParser():
         return (self.config['gmail']['pass'])
     
     def get_Outlook_Url(self):
-        return (self.config['gmail']['pass'])
+        return (self.config['outlook']['pass'])
 
 if __name__ == '__main__':
     config = ConfigFileParser('prod.ini')

@@ -19,4 +19,8 @@ def get_Gmail_User():
 def get_Gmail_Pass():
     return (config['gmail']['pass'])
 
+
+def get_Outlook_Url():
+    return (config['outlook']['pass'])
+
 print(get_Gmail_Url())
