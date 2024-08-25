@@ -20,4 +20,3 @@ def getGmailPass():
     return (config['gmail']['pass'])
 
 print(getGmailUrl())
-print(getGmailPass())
