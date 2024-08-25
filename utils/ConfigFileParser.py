@@ -28,5 +28,6 @@ class ConfigFileParser():
 
 if __name__ == '__main__':
     config = ConfigFileParser('prod.ini')
-    print(config.getGmailUrl())
+    print(config.get_Gmail_Url())
+    print(config.get_Outlook_Url())
 
