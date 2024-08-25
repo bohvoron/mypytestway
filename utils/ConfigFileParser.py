@@ -14,16 +14,19 @@ class ConfigFileParser():
         self.config.read(self.CONFIG_FILE)
 
 
-    def getGmailUrl(self):
+    def get_Gmail_Url(self):
         return (self.config['gmail']['url'])
 
-    def getGmailUser(self):
+    def get_Gmai_lUser(self):
         return (self.config['gmail']['user'])
 
-    def getGmailPass(self):
+    def get_Gmail_Pass(self):
+        return (self.config['gmail']['pass'])
+    
+    def get_Outlook_Url(self):
         return (self.config['gmail']['pass'])
 
 if __name__ == '__main__':
-    config = ConfigFileParser('qa.ini')
+    config = ConfigFileParser('prod.ini')
     print(config.getGmailUrl())
 

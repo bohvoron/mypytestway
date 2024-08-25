@@ -10,13 +10,13 @@ CONFIG_FILE = BASE_DIR.joinpath(cfgFileDirectory).joinpath(cfgFile)
 
 config.read(CONFIG_FILE)
 
-def getGmailUrl():
+def get_Gmail_Url():
     return (config['gmail']['url'])
 
-def getGmailUser():
+def get_Gmail_User():
     return (config['gmail']['user'])
 
-def getGmailPass():
+def get_Gmail_Pass():
     return (config['gmail']['pass'])
 
-print(getGmailUrl())
+print(get_Gmail_Url())
