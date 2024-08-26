@@ -36,7 +36,7 @@ def final_balance():
 
 @scenario(FEATURE_FILE, 'Remove fruits with set')
 def test_remove_fruit():
-    print('End of test Rempove')
+    print('End of test Remove')
     pass
 
 
@@ -51,4 +51,5 @@ def remove_fruit(my_set):
     print(my_set)
 
 @then('finall set has 3 fruits')
-def final_fruit_number():
+def final_fruit_number(my_set):
+    assert (len(my_set)) == 3
