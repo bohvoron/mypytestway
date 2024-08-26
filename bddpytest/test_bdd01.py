@@ -10,7 +10,7 @@ FEATURE_FILE = BASE_DIR.joinpath(feature_file_directory).joinpath(featureFile)
 def pytest_configure():
     pytest.AMT = 0
 
-@scenarios(FEATURE_FILE, 'Withdrawal of money')
+@scenario(FEATURE_FILE, 'Withdrawal of money')
 def test_withdrawal():
     print('End of test Withdrawal')
     pass
