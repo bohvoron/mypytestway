@@ -3,10 +3,11 @@
 *.pyd
 *.log
 *.sqlite3
-#env/
+
 .DS_Store
 .vscode/
 .env
 .venv
 node_modules/
 __pycache__/
+env/
