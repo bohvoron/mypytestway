@@ -29,3 +29,26 @@ def withdraw_balance():
 def final_balance():
     assert pytest.AMT == 700
 
+
+
+
+
+
+@scenario(FEATURE_FILE, 'Remove fruits with set')
+def test_remove_fruit():
+    print('End of test Rempove')
+    pass
+
+
+@given('have set of 4 fruits', target_fixture="my_set")
+def start_fruits_number():
+    my_set = {'banana','apple','cherry','pineapple'}
+    return my_set
+
+@when('We remove 1 fruit from a set')
+def remove_fruit(my_set):
+    my_set.pop()
+    print(my_set)
+
+@then('finall set has 3 fruits')
+def final_fruit_number():
