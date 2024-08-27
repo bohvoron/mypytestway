@@ -1,5 +1,5 @@
 import pytest 
-from pytest_bdd import scenarios, given, when, then
+from pytest_bdd import scenarios,scenario, given, when, then
 from pathlib import Path
 
 feature_file_directory = 'bddfeatures'
@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent
 FEATURE_FILE = BASE_DIR.joinpath(feature_file_directory).joinpath(featureFile)
 
 
-#print(FEATURE_FILE)
+print(FEATURE_FILE)
 
 scenarios(FEATURE_FILE)
 
@@ -26,7 +26,7 @@ def check_typeof_set(setup_set):
 
 @given('set is not empty')
 def check_set_not_empty(setup_set):
-    if len(setup_set) == 'asd':
+    if len(setup_set) == 0:
         pytest.xfail('set is empty')
 
 
@@ -40,15 +40,15 @@ def set_elements(setup_set):
     return setup_set
 
 @when('Add 2 elem to set')
-def add_elements(setup_set01):
-    setup_set01.add('America')
-    setup_set01.add('Spain')
+def test_add_elements(setup_set):
+    setup_set.add('America')
+    setup_set.add('Spain')
 
 
 @then('total is 5 elem')
-def total_elem(setup_set01):
-    print(setup_set01)
-    assert len(setup_set01) == 5
+def test_total_elem(setup_set):
+    print(setup_set)
+    assert len(setup_set) == 5
 
 
 
