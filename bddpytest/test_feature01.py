@@ -7,6 +7,9 @@ featureFile = 'newfeature.feature'
 BASE_DIR = Path(__file__).resolve().parent
 FEATURE_FILE = BASE_DIR.joinpath(feature_file_directory).joinpath(featureFile)
 
+
+print(FEATURE_FILE)
+
 scenarios(FEATURE_FILE)
 
 @pytest.fixture()
