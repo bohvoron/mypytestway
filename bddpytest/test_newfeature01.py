@@ -21,13 +21,13 @@ def setup_set():
 
 @given('datatype is set')
 def check_typeof_set(setup_set):
-    print("This is in Background")
+    print("This is in Background check type set")
     if not isinstance(setup_set, set):
         pytest.xfail('type of obj is not a set')
 
 @given('set is not empty')
 def check_set_not_empty(setup_set):
-    print("This is in Background")
+    print("This is in Background check not empty set")
     if len(setup_set) == 0:
         pytest.xfail('set is empty')
 
