@@ -1,5 +1,5 @@
 import pytest 
-from pytest_bdd import scenario, scenarios, given, when, then
+from pytest_bdd import scenarios, given, when, then
 from pathlib import Path
 
 feature_file_directory = 'bddfeatures'
