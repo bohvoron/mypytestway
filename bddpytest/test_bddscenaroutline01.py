@@ -29,5 +29,4 @@ def withdraw_cars(cars,withdraw):
 
 @then(parsers.parse('I have {finall:d} cars'))
 def finall_count_cars(cars,finall):
-    cars[finall] = finall
-    print(cars)
+    assert cars['start'] + cars['deposit'] - cars['withdraw'] == finall
