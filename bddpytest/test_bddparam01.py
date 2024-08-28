@@ -36,23 +36,21 @@ def increase_function(cars, count):
 
 
 @given(parsers.parse('Given a {count:d} cars'),target_fixture='start_cars')
-def five_five(count):
+def cars_five(count):
     return dict(start=count, gave=0)
 
 
-@when('I gave {count:d} cars to cousin')
+@when(parsers.parse('I gave {gave:d} cars to cousin'))
 def gave_3_sister(start_cars,gave):
     print(start_cars)
     start_cars['gave'] += gave
+   
+@when(parsers.parse('I gave {gave:d} cars to cousen'))
+def gave_2_brother(start_cars,gave):
+    print(start_cars)
+    start_cars['gave'] += gave
 
-
-
-@when('I gave 2 cars to cousen')
-def gave_2_brother(cars):
-    cars.pop
-    cars.pop
-    cars.pop
-
-@then(('I have 0 cars for gifts'))
-def left_for_gifts(cars):
-    assert len(cars) == 0
+@then(parsers.parse('I have {total:d} cars for gifts'))
+def left_for_gifts(start_cars,total):
+     print(start_cars)
+     assert start_cars['start'] - start_cars['gave'] == total
