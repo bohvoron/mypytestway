@@ -9,7 +9,7 @@ Feature: Scenario outline
         
         Examples: 
         |  start  |  deposit  |  withdraw  |  finall  | 
-        | value 1 |     5     |     7      |   10     |
-        | value 2 |     5     |     20     |   -5     |
+        |   20    |     5     |     7      |   18     |
+        |   10    |     9     |     20     |   -1     |
      
  
