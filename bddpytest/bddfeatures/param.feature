@@ -1,3 +1,4 @@
+@bddparam
 Feature: Parameterizing in Pytest BDD
 
     Scenario: Parametrize showcase
@@ -7,6 +8,7 @@ Feature: Parameterizing in Pytest BDD
         But if we add a some different variaty
         Then Count increases to 5 
     
+    @bddbenef
     Scenario: Parametrize benefits 
         Given Given a 5 cars
         When I gave 3 cars to cousin
