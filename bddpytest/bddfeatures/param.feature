@@ -10,5 +10,5 @@ Feature: Parameterizing in Pytest BDD
     Scenario: Parametrize benefits 
         Given Given a 5 cars
         When I gave 3 cars to cousin
-        And I gave 2 cars to cousen 
+        And I gave 2 cars to cousin 
         Then I have 0 cars for gifts

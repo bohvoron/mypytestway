@@ -14,7 +14,7 @@ scenarios(FEATURE_FILE)
 
 @given('4 variaties cars', target_fixture='cars')
 def set_up():
-    cars = {'BMW','Audi','Nissan','Ford'}
+    cars = {'BMW','Audi','Nissan','Ford'} 
     return cars
 
 @when('add same variaty')
@@ -42,15 +42,9 @@ def cars_five(count):
 
 @when(parsers.parse('I gave {gave:d} cars to cousin'))
 def gave_3_sister(start_cars,gave):
-    print(start_cars)
     start_cars['gave'] += gave
+    print(start_cars)
    
-@when(parsers.parse('I gave {gave:d} cars to cousen'))
-def gave_2_brother(start_cars,gave):
-    print(start_cars)
-    start_cars['gave'] += gave
-
 @then(parsers.parse('I have {total:d} cars for gifts'))
 def left_for_gifts(start_cars,total):
-     print(start_cars)
      assert start_cars['start'] - start_cars['gave'] == total
