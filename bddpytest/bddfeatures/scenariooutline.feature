@@ -1,7 +1,7 @@
-Feature: Scenario outline
+Feature: Scenario outline feature
     similar to Parameterizing
    
-   Scenario Outline: Test with Outline
+   Scenario Outline: Scenario outline
         Given There are <start> cars
         When I deposit <deposit> cars
         And I withdraw <withdraw> cars
