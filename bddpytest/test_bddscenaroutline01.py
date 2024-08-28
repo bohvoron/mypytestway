@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent
 FEATURE_FILE = BASE_DIR.joinpath(feature_file_directory).joinpath(featureFile)
 
 
-scenario(FEATURE_FILE, 'Scenario outline')
+@scenario(FEATURE_FILE, 'Scenario outline')
 def test_outline():
     pass
 
@@ -24,7 +24,7 @@ def deposit_cars(cars, deposit):
 
 @when(parsers.parse('I withdraw {withdraw:d} cars'))
 def withdraw_cars(cars,withdraw):
-    cars[withdraw] = withdraw
+    cars['withdraw'] = withdraw
     print(cars)
 
 @then(parsers.parse('I have {finall:d} cars'))
